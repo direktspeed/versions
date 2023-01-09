@@ -11,20 +11,25 @@ Push to other branch then current on remote
 git push github -u HEAD:development
 ```
 
-git clone refrenced
+git clone refrenced:
+as rule of thumb you need to create sub directorys for your branches if they are not the main. 
+if it is the main it makes no sense to put it into a subdir but worktrees or checkouts that you add
+should represent a branch as by default. 
 ```
-git clone -s -o local /.versions ./new-project
+## existing
+git clone -s -o origin -b development /.versions ./new-project/development
+## new
+git clone -s -o origin /.versions ./new-project
 git switch -c prefix/new-project
 
 echo "# new-project " > README.md
 git add README.md && git commit -m "Add: README.md"
 
-## here we change the tracking branch so we can git -b prefix/ when working with that.
-git push local -u HEAD:prefix/new-project
+git push origin -u HEAD:prefix/new-project
 git push github HEAD:main
 
 # After that you set your remote tracking branch so you can use 
-git push local and everything works as long as you did not switched the branch that you wanted to push
+git push origin and everything works as long as you did not switched the branch that you wanted to push
 
 
 # git clone -s --branch development --recurse-submodules --single-branch

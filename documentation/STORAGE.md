@@ -38,3 +38,16 @@ as it is declarativ documented where it did the deployment.
 to enable that use husky2 in your /.versions or git server repos dir then configure it 
 to run your server hooks that are commited to your repo. if you need additional security
 only allow .git-hooks.js commits from trusted commiters verify the commit message signing key.
+
+
+## usage
+use git-worktree to deploy individual branches composed to components.
+This tracks the evolution of your software project. configure the worktree
+checkouts via a common .component-manager.js file it will handle the deployment
+as also allows you to track the used versions in a unified way.
+
+you deploy a branch of your repo including its .component-manager.js if your a component-manager user or .git-hooks.js
+file if your a husky2 user.
+
+if you use both you know you will simply use in both files the same so you can do import('the.js');
+in any of the one to unifie the behavior.
