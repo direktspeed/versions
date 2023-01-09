@@ -25,12 +25,13 @@ can replace the following Software partial if you incremental upgrade or directl
 - LDAP and other Directory Services to Enforce Compliance on Infrastructure.
 
 /.versions ~/.versions is all you need to be happy in your Work as a DevOp.
-./storage/id
+./storage
 ./worktrees/.... .... ... # holds the worktrees for the current system they are representations of versioned content that are accessable as general files
 
 
 ## Features
 - Deployment Automation
+ - You can use the same workflows local and deploy them to remote git/svn servers and platforms
 - Secuirty and Compliance Enforcement
 - Automated Data Management and Handling
 - Easyer developer on boarding for any project
