@@ -1,4 +1,4 @@
-# @direktsped/versions
+# @direktsped/versions Core Component of: AwesomeOS - @direktspeed/aweseomeos
 A Version Manager that can operate and automate autonomous systems.
 
 It is designed to solve development issues of all kind as also allow you to automate
