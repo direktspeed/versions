@@ -30,6 +30,7 @@ git['post-commit'] = () => {
 //     git commit --amend -C HEAD --no-verify
 }
 ```
+
 ## changeId generation
 the change id can most best generated via hashing the commit message it self without the two lines
 then inserting only the change id the git commit hash then reflects change-id+ signedoff
@@ -51,3 +52,5 @@ Change-Id: ${new Date()}
 Signed-off-by: A. U. Thor <author@example.com>`);
 }
 ```
+
+as rule .versions/refs/* contains files with one line only githashes .

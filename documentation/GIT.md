@@ -1,5 +1,11 @@
 # Cheatsheet
 - note that git checkout got replaced by git switch -c creates new branch
+`localBranch(+remteRef)#branchOrRef)`
+`direktspeed/versions+github#master`
+`direktspeed/versions+github#development`
+`direktspeed/versions#master`
+`direktspeed/versions`
+`direktspeed/versions#!git@github.com#master`
 
 remove remote branch
 ```
@@ -17,15 +23,15 @@ if it is the main it makes no sense to put it into a subdir but worktrees or che
 should represent a branch as by default. 
 ```
 ## existing
-git clone -s -o origin -b development /.versions ./new-project/development
+git clone -s -o origin -b development /.versions ./new-project#development
 ## new
 git clone -s -o origin /.versions ./new-project
-git switch -c prefix/new-project
+git switch -c prefix/new-project#branch
 
 echo "# new-project " > README.md
 git add README.md && git commit -m "Add: README.md"
 
-git push origin -u HEAD:prefix/new-project
+git push origin -u HEAD:prefix/new-project/branch
 git push github HEAD:main
 
 # After that you set your remote tracking branch so you can use 

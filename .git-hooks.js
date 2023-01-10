@@ -1,6 +1,14 @@
-const downloadGitPrompt = () => fs.promises.readFile('/.git/git-prompt.sh').catch(()=>
-fetch('https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh').then(b=>
-b.text()).then(content=>fs.promises.writeFile('/.git/git-prompt.sh', content)));
+// 	path = refs/github/direktspeed/versions/development
+// 	url = git@github.com:direktspeed/versions
+// 	branch = development
+// github:direktspeed/versions/development
+// Ignoring git remotes using configured remotes.
+// const remotes = ['git@github.com:direktspeed/versions'].map(repo=>[repo+'#main',repo+'#development']);
+// remotes.flatMap(ref=> `git push ${ref.split('#')[0]} HEAD:${ref.split('#')[1]}`);
+
+// const downloadGitPrompt = () => fs.promises.readFile('/.git/git-prompt.sh').catch(()=>
+// fetch('https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh').then(b=>
+// b.text()).then(content=>fs.promises.writeFile('/.git/git-prompt.sh', content)));
 
 // git ls-tree -z HEAD | git mktree # creates tree object.
 // # Terminal Prompt: Show git branch name at command prompt add to .bashrc
